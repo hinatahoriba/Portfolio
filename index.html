@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 共通スタイル */
+        body {
+            font-family: 'Vollkorn', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: black;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="black" /></svg>') 8 8, auto;
+        }
+
+        /* ヘッダーセクション */
+        .header-section {
+            background: url('image/flowers.jpg') center/cover;
+            color: black;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .header-container {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 50px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header-section h1, .header-section h2, .header-section p {
+            color: black;
+        }
+
+        .header-section h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header-section h2 {
+            font-size: 3em;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .header-section p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .header-section a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* メインコンテンツ */
+        .main-content {
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 33vh;
+        }
+
+        .main-content h2 {
+            font-size: 4em;
+            margin-bottom: 30px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* 画像ギャラリー */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .image-gallery img {
+            width: 350px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-gallery a:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.9) sepia(0.5);
+        }
+
+        .footer {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+        
+        .footer-container {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        
+        .email-link {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+        }
+        
+        .arrow {
+            font-size: 2em;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-top: 1px solid gray;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+        
+        .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        
+        .back-to-top {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+        }        
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 150px 20px;
+            }
+            .header-section h1 {
+                font-size: 3em;
+            }
+            .header-section h2 {
+                font-size: 1.5em;
+            }
+            .main-content {
+                margin-top: 25vh;
+            }
+            .main-content h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <section class="header-section">
+        <div class="header-container">
+            <h1>HINATA HORIBA</h1>
+            <h2>PORTFOLIO</h2>
+            <p>
+                I'm a software engineer with a strong interest in continuous learning.
+                I'm looking forward to collaborating on interesting projects and connecting with people from various backgrounds.
+            </p>
+        </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <section class="main-content">
+        <h2>Welcome to my portfolio!</h2>
+        <p>This is where I showcase my passion for software development and my commitment to continuous learning. I'm thrilled to share my work with you, and I hope you find inspiration and value in what you see. Feel free to explore my projects, and I look forward to connecting with you.</p>
+
+        <!-- 画像ギャラリー -->
+        <div class="image-gallery">
+            <a href="https://wry-ping-a57.notion.site/About-Me-1b4ad5eb1fd68079b442d351226d941f"><img src="image/aboutme.jpg" alt="about me"></a>
+            <a href="https://wry-ping-a57.notion.site/Works-1b4ad5eb1fd680dbbc99f758ecf0fa54?pvs=73"><img src="image/works.jpg" alt="work"></a>
+            <a href="https://wry-ping-a57.notion.site/BLOG-1b4ad5eb1fd680f3a8cde71703e46df6?pvs=73"><img src="image/blog.jpg" alt="blog"></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Contact</h3>
+            <span class="email-link">h.hori.hinata@gmail.com</span>
+            <span class="arrow">&#8599;</span>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>All Rights Reserved 2025 &copy; Hinata Horiba</p>
+            <a href="#top" class="back-to-top">(Back to top)</a>
+        </div>
+    </footer>
+</body>
+</html>
